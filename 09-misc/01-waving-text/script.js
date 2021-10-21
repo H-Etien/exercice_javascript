@@ -15,11 +15,6 @@
     // on va stocker tout le contenu du msg dans un tableau
 
     var new_msg = "";
-    var msg_1 = "";
-    var msg_2 = "";
-    var msg_3 = "";
-    var msg_4 = "";
-    var msg_5 = "";
 
     var i = 0;
     lettre = "";

@@ -10,5 +10,28 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", function(){
+        
+        window.lib.getPosts(function(error, articles){
+            if(error)
+                console.log(error);
+            else{
+                for(element in articles){
+                    window.lib.getComments(element,(error, commentS) => {
+
+                        if(error)
+                            console.log(error);
+                        else{
+                            articles[element].commentaireS=commentS;
+                            // console.log("araticle : " + JSON.stringify(articles, null, 1));
+                            // console.log("article[] : " + JSON.stringify(articles[element], null, 1))
+                            console.log(articles[element]);
+                        }
+                    })
+                }
+            }
+        })
+    })
+    
+    // console.log(window.lib.getComments((error,articles)));
 })();

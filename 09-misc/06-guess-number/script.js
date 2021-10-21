@@ -10,5 +10,21 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    var number_guess = Math.floor(Math.random()*100+1);
+    var number;
+    var nb_input = 0;
+    
+    do{
+        number = prompt("quel est votre nombre ?");
+        if(number > number_guess)
+            alert("plus petit");
+
+        if(number < number_guess)
+            alert("plus grand");
+
+        nb_input++;
+
+    }while(number != number_guess)
+
+    alert("bien joué, réussi en " + nb_input.toString() + " fois");
 })();

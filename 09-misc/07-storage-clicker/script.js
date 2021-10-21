@@ -10,5 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    if (localStorage.increment == undefined)
+        localStorage.increment = 0;
+    
+    document.getElementById("target").innerHTML = localStorage.increment;
+    
+    document.getElementById("increment").addEventListener("click", function(){
+        localStorage.increment = parseInt(localStorage.increment) + 1;
+        document.getElementById("target").innerHTML = localStorage.increment;
+    })
 })();

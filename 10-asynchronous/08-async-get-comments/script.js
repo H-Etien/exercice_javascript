@@ -10,5 +10,25 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    async function func_comment(){
+        window.lib.getPosts().then(res => {
+            res.forEach(ele => {
+                window.lib.getComments().then(tab_commentaires =>{
+                    // tab_commentaires.forEach(com => {
+                    //     if(ele.id == com.id){
+                    //         ele.commantaires_nom = com
+                    //     }
+                    // })
+                    ele.commentaires_new = tab_commentaires;
+                    console.log(ele)
+                })
+                .catch(error => console.log(error))
+            })
+        })  
+    }
+
+    document.getElementById("run").addEventListener("click", async () => {
+            await func_comment();
+    })
 })();

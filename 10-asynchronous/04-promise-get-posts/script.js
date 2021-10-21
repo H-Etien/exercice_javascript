@@ -10,5 +10,8 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    window.lib.getPosts().then(response => console.log(response))
+    .catch(error => console.log(error))
+
 })();

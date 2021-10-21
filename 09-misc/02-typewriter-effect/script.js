@@ -16,8 +16,6 @@
     new_msg = "";
     var i = 0;
 
-    var delay = 200;
-
     // setInterval(() => {
     //     new_msg += msg[i];
     //     i++;
@@ -38,11 +36,6 @@
             setTimeout(apparition_lettre, delay);
     }
 
-    
-
     apparition_lettre ()
-
-    console.log("last" + i);
-    console.log("last" + i);
 
 })();
